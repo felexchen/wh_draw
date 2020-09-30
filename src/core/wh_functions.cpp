@@ -438,19 +438,33 @@ float medDeepCSV2018 = 0.4184;
 //  //  std::vector<float> const signalSF2018_unc = {0.05, 0.03, 0.03, 0.04, 0.04};
 //  std::vector<float> const signalSF2018_unc = {0.3, 0.3, 0.3, 0.3, 0.3};
 
-  std::vector<float> const signalSF_LP_2016 = {1.04, 0.97, 1.02, 0.95, 0.98};
-  std::vector<float> const signalSF_LP_2016_unc = {0.11, 0.09, 0.08, 0.10, 0.10};
-  std::vector<float> const signalSF_LP_2017 = {1.01, 1.10, 1.03, 0.95, 0.96};
-  std::vector<float> const signalSF_LP_2017_unc = {0.11, 0.13, 0.10, 0.12, 0.10};
-  std::vector<float> const signalSF_LP_2018 = {0.91, 1.2, 1.05, 0.93, 1.05};
-  std::vector<float> const signalSF_LP_2018_unc = {0.12, 0.15, 0.09, 0.10, 0.12};
- 
-  std::vector<float> const signalSF_HP_2016 = {1.06, 1.06, 1.00, 0.98, 1.01};
-  std::vector<float> const signalSF_HP_2016_unc = {0.07, 0.06, 0.09, 0.08, 0.05};
-  std::vector<float> const signalSF_HP_2017 = {0.92, 0.96, 0.99, 1.05, 1.17};
-  std::vector<float> const signalSF_HP_2017_unc = {0.08, 0.09, 0.07, 0.07, 0.11};
-  std::vector<float> const signalSF_HP_2018 = {0.97, 0.85, 1.04, 1.03, 1.03};
-  std::vector<float> const signalSF_HP_2018_unc = {0.12, 0.07, 0.09, 0.08, 0.09};
+//  std::vector<float> const signalSF_LP_2016 = {0.99, 1.00, 0.97, 0.91, 0.95};     // old
+//  std::vector<float> const signalSF_LP_2016_unc = {0.04, 0.06, 0.03, 0.05, 0.04}; // old
+//  std::vector<float> const signalSF_LP_2017 = {1.05, 1.05, 1.01, 1.06, 1.13};	  // old
+//  std::vector<float> const signalSF_LP_2017_unc = {0.04, 0.02, 0.03, 0.03, 0.05}; // old
+//  std::vector<float> const signalSF_LP_2018 = {1.32, 1.35, 1.22, 1.31, 1.30};	  // old
+//  std::vector<float> const signalSF_LP_2018_unc = {0.05, 0.03, 0.03, 0.04, 0.04}; // old
+// 										  // old
+//wrong  std::vector<float> const signalSF_HP_2016 = {1.06, 1.06, 1.00, 0.98, 1.01};	  // old
+//wrong  std::vector<float> const signalSF_HP_2016_unc = {0.07, 0.06, 0.09, 0.08, 0.05}; // old
+//wrong  std::vector<float> const signalSF_HP_2017 = {0.92, 0.96, 0.99, 1.05, 1.17};	  // old
+//wrong  std::vector<float> const signalSF_HP_2017_unc = {0.08, 0.09, 0.07, 0.07, 0.11}; // old
+//wrong  std::vector<float> const signalSF_HP_2018 = {0.97, 0.85, 1.04, 1.03, 1.03};	  // old
+//wrong  std::vector<float> const signalSF_HP_2018_unc = {0.12, 0.07, 0.09, 0.08, 0.09}; // old
+
+  std::vector<float> const signalSF_LP_2016 = {1.04, 0.97, 1.02, 0.95, 0.98};     // new
+  std::vector<float> const signalSF_LP_2016_unc = {0.11, 0.09, 0.08, 0.10, 0.10}; // new
+  std::vector<float> const signalSF_LP_2017 = {1.01, 1.10, 1.03, 0.95, 0.96};	  // new
+  std::vector<float> const signalSF_LP_2017_unc = {0.11, 0.13, 0.10, 0.12, 0.10}; // new
+  std::vector<float> const signalSF_LP_2018 = {0.91, 1.2, 1.05, 0.93, 1.05};	  // new
+  std::vector<float> const signalSF_LP_2018_unc = {0.12, 0.15, 0.09, 0.10, 0.12}; // new
+ 										  // new
+  std::vector<float> const signalSF_HP_2016 = {1.06, 1.06, 1.00, 0.98, 1.01};	  // new
+  std::vector<float> const signalSF_HP_2016_unc = {0.07, 0.06, 0.09, 0.08, 0.05}; // new
+  std::vector<float> const signalSF_HP_2017 = {0.92, 0.96, 0.99, 1.05, 1.17};	  // new
+  std::vector<float> const signalSF_HP_2017_unc = {0.08, 0.09, 0.07, 0.07, 0.11}; // new
+  std::vector<float> const signalSF_HP_2018 = {0.97, 0.85, 1.04, 1.03, 1.03};	  // new
+  std::vector<float> const signalSF_HP_2018_unc = {0.12, 0.07, 0.09, 0.08, 0.09}; // new
 
   float const LP_cutoff = 0.8;
   float const HP_cutoff = 0.97;
@@ -461,7 +475,8 @@ float medDeepCSV2018 = 0.4184;
   std::vector<float> const fastEff2018_750_1 = {0.816, 0.865};
   std::vector<float> const fullEff2016_750_1 = {0.742, 0.84};
   std::vector<float> const fullEff2018_750_1 = {0.824, 0.909};
-  std::vector<float> const fullEff2017_750_1 = fullEff2018_750_1;//placeholder
+  //  std::vector<float> const fullEff2017_750_1 = fullEff2018_750_1;//placeholder
+  std::vector<float> const fullEff2017_750_1 = {0.7933, 0.88};//placeholder
 
   const NamedFunc signalHiggsMistagSF("signalHiggsMistagSF",[](const Baby &b) -> NamedFunc::ScalarType{
       // based on method 1a of https://twiki.cern.ch/twiki/bin/view/CMS/BTagSFMethods
