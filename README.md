@@ -39,6 +39,7 @@ Higgs Tag SF Instructions
 
 #### For more information on how to set up wh_draw: https://github.com/heller3/wh_draw
 #### For more information on how to set up WH_studies: https://github.com/danbarto/WH_studies
+In particular, make sure the proper RootTools and nanoAOD-Tools are set up for each repo.
 
 #### For input distributions:
 
