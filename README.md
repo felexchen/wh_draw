@@ -37,7 +37,8 @@ Higgs Tag SF Instructions
 ~$ source $VO_CMS_SW_DIR/cmsset_default.sh
 ```
 
-#### For more information on how to set up wh_draw: https://github.com/heller3/wh_draw For more information on how to set up WH_studies: https://github.com/danbarto/WH_studies
+#### For more information on how to set up wh_draw: https://github.com/heller3/wh_draw
+#### For more information on how to set up WH_studies: https://github.com/danbarto/WH_studies
 
 #### For input distributions:
 
