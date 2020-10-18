@@ -122,4 +122,4 @@ and then
 ~$ ./copy.sh
 ```
 
-The plots should now be available at http://uaf-10.t2.ucsd.edu/~<your uaf username>/WH_studies/
+The plots should now be available at http://uaf-10.t2.ucsd.edu/~your_uaf_username/WH_studies/
