@@ -36,9 +36,11 @@ int main(){
 //  string signal2018_dir = "/home/users/dspitzba/wh_babies/babies_v33_4_2020_05_27/"; // slim*SMS*.root
 
   string signal2016_dir_full_350_100 = "/home/users/dspitzba/wh_babies/babies_v33_8_2020_07_16/SMS_TChiWH_mCh350_mLSP100_s16v3/";
+  string signal2017_dir_full_350_100 = "/home/users/dspitzba/wh_babies/babies_v33_8_2020_07_16/SMS_TChiWH_mCh350_mLSP100_f17v2/";
   string signal2018_dir_full_350_100 = "/home/users/dspitzba/wh_babies/babies_v33_8_2020_07_16/SMS_TChiWH_mCh350_mLSP100_a18v1/";
 
   string signal2016_dir_full_750_1 = "/home/users/dspitzba/wh_babies/babies_v33_8_2020_07_16/SMS_TChiWH_mCh750_mLSP1_s16v3/";
+  string signal2017_dir_full_750_1 = "/home/users/dspitzba/wh_babies/babies_v33_8_2020_07_16/SMS_TChiWH_mCh750_mLSP1_f17v2/";
   string signal2018_dir_full_750_1 = "/home/users/dspitzba/wh_babies/babies_v33_8_2020_07_16/SMS_TChiWH_mCh750_mLSP1_a18v1/";
  
   string signal2016_dir_fast = "/home/users/dspitzba/wh_babies/babies_v33_8_2020_07_16/";
@@ -118,9 +120,11 @@ int main(){
  
   //signals
   auto signal_2016_350_100_full = Process::MakeShared<Baby_full>("2016 Signal (350,100) Full", Process::Type::signal, colors("t1tttt"),{signal2016_dir_full_350_100+"slim*"},"pass");
+  auto signal_2017_350_100_full = Process::MakeShared<Baby_full>("2017 Signal (350,100) Full", Process::Type::signal, colors("t1tttt"),{signal2017_dir_full_350_100+"slim*"},"pass");
   auto signal_2018_350_100_full = Process::MakeShared<Baby_full>("2018 Signal (350,100) Full", Process::Type::signal, colors("t1tttt"),{signal2018_dir_full_350_100+"slim*"},"pass");
 
   auto signal_2016_750_1_full = Process::MakeShared<Baby_full>("2016 Signal (750,1) Full", Process::Type::signal, colors("t2tttt"),{signal2016_dir_full_750_1+"slim*"},"pass");
+  auto signal_2017_750_1_full = Process::MakeShared<Baby_full>("2017 Signal (750,1) Full", Process::Type::signal, colors("t2tttt"),{signal2017_dir_full_750_1+"slim*"},"pass");
   auto signal_2018_750_1_full = Process::MakeShared<Baby_full>("2018 Signal (750,1) Full", Process::Type::signal, colors("t2tttt"),{signal2018_dir_full_750_1+"slim*"},"pass");
 
   auto signal_2016_350_100_fast = Process::MakeShared<Baby_full>("2016 Signal (350,100) Fast", Process::Type::signal, colors("t3tttt"),{signal2016_dir_fast+"slim*s16v3*"},"pass&&mass_stop==350&&mass_lsp==100");
@@ -174,10 +178,10 @@ int main(){
   
   // Column combinations by year
   vector<shared_ptr<Process> > sample_list_2016        = {data2016,/*tt_2016_all,*//*tt2l_2016,tt1l_2016,tt2l_2016_met,tt1l_2016_met,*//*single_t_2016,wjets_2016,ttV_2016,*/diboson_2016,/*signal_2016_225_75,signal_2016_650_300,signal_2016_700_1,signal_2016_all,signal_2016_all_mass,signal_2016_all_mass_diff_l250,signal_2016_all_mass_diff_ge250_le500,signal_2016_all_mass_diff_g500,*/signal_2016_350_100_full,signal_2016_750_1_full,signal_2016_350_100_fast,signal_2016_750_1_fast};
-  vector<shared_ptr<Process> > sample_list_2017        = {data2017,/*tt_2017_all,*//*tt2l_2017,tt1l_2017,tt2l_2017_met,tt1l_2017_met,*//*single_t_2017,wjets_2017,ttV_2017,*/diboson_2017,/*signal_2017_225_75,signal_2017_650_300,signal_2017_700_1,signal_2017_all,signal_2017_all_mass,signal_2017_all_mass_diff_l250,signal_2017_all_mass_diff_ge250_le500,signal_2017_all_mass_diff_g500,*//*signal_2017_350_100_full,signal_2017_750_1_full,*/signal_2017_350_100_fast,signal_2017_750_1_fast};
+  vector<shared_ptr<Process> > sample_list_2017        = {data2017,/*tt_2017_all,*//*tt2l_2017,tt1l_2017,tt2l_2017_met,tt1l_2017_met,*//*single_t_2017,wjets_2017,ttV_2017,*/diboson_2017,/*signal_2017_225_75,signal_2017_650_300,signal_2017_700_1,signal_2017_all,signal_2017_all_mass,signal_2017_all_mass_diff_l250,signal_2017_all_mass_diff_ge250_le500,signal_2017_all_mass_diff_g500,*/signal_2017_350_100_full,signal_2017_750_1_full,signal_2017_350_100_fast,signal_2017_750_1_fast};
   vector<shared_ptr<Process> > sample_list_2018        = {data2018,/*tt_2018_all,*//*tt2l_2018,tt1l_2018,tt2l_2018_met,tt1l_2018_met,*//*single_t_2018,wjets_2018,ttV_2018,*/diboson_2018,/*signal_2018_225_75,signal_2018_650_300,signal_2018_700_1,signal_2018_all,signal_2018_all_mass,signal_2018_all_mass_diff_l250,signal_2018_all_mass_diff_ge250_le500,signal_2018_all_mass_diff_g500,*/signal_2018_350_100_full,signal_2018_750_1_full,signal_2018_350_100_fast,signal_2018_750_1_fast};
   vector<shared_ptr<Process> > sample_list_2016_nodata = {         /*tt_2016_all,*//*tt2l_2016,tt1l_2016,tt2l_2016_met,tt1l_2016_met,*//*single_t_2016,wjets_2016,ttV_2016,*/diboson_2016,/*signal_2016_225_75,signal_2016_650_300,signal_2016_700_1,signal_2016_all,signal_2016_all_mass,signal_2016_all_mass_diff_l250,signal_2016_all_mass_diff_ge250_le500,signal_2016_all_mass_diff_g500,*/signal_2016_350_100_full,signal_2016_750_1_full,signal_2016_350_100_fast,signal_2016_750_1_fast};
-  vector<shared_ptr<Process> > sample_list_2017_nodata = {         /*tt_2017_all,*//*tt2l_2017,tt1l_2017,tt2l_2017_met,tt1l_2017_met,*//*single_t_2017,wjets_2017,ttV_2017,*/diboson_2017,/*signal_2017_225_75,signal_2017_650_300,signal_2017_700_1,signal_2017_all,signal_2017_all_mass,signal_2017_all_mass_diff_l250,signal_2017_all_mass_diff_ge250_le500,signal_2017_all_mass_diff_g500,*//*signal_2017_350_100_full,signal_2017_750_1_full,*/signal_2017_350_100_fast,signal_2017_750_1_fast};
+  vector<shared_ptr<Process> > sample_list_2017_nodata = {         /*tt_2017_all,*//*tt2l_2017,tt1l_2017,tt2l_2017_met,tt1l_2017_met,*//*single_t_2017,wjets_2017,ttV_2017,*/diboson_2017,/*signal_2017_225_75,signal_2017_650_300,signal_2017_700_1,signal_2017_all,signal_2017_all_mass,signal_2017_all_mass_diff_l250,signal_2017_all_mass_diff_ge250_le500,signal_2017_all_mass_diff_g500,*/signal_2017_350_100_full,signal_2017_750_1_full,signal_2017_350_100_fast,signal_2017_750_1_fast};
   vector<shared_ptr<Process> > sample_list_2018_nodata = {         /*tt_2018_all,*//*tt2l_2018,tt1l_2018,tt2l_2018_met,tt1l_2018_met,*//*single_t_2018,wjets_2018,ttV_2018,*/diboson_2018,/*signal_2018_225_75,signal_2018_650_300,signal_2018_700_1,signal_2018_all,signal_2018_all_mass,signal_2018_all_mass_diff_l250,signal_2018_all_mass_diff_ge250_le500,signal_2018_all_mass_diff_g500,*/signal_2018_350_100_full,signal_2018_750_1_full,signal_2018_350_100_fast,signal_2018_750_1_fast};
   // Column combinations all years
 //  vector<shared_ptr<Process> > sample_list_comb        = {dataComb, tt_comb_all, /*tt2l_Comb, tt1l_Comb, tt2l_Comb_met, tt1l_Comb_met,*/ single_t_Comb, wjets_Comb, ttV_Comb, diboson_Comb, /*signal_comb_225_75, signal_comb_650_300, signal_comb_700_1, signal_comb_all, signal_comb_all_mass, */signal_comb_all_mass_diff_l250, signal_comb_all_mass_diff_ge250_le500, signal_comb_all_mass_diff_g500};
@@ -362,22 +366,23 @@ int main(){
 //     signal_sample_list_2018,
 //     signal_sample_list_comb};
   
-//  vector<double> binning = {200,400,600,800,1000};
-//  for (uint iyear = 0; iyear < years.size(); iyear++) {
-//    //    if (0 != iyear) {break;}
-//    for (uint isel = 0; isel < sels_CR.size(); isel++) {
-//      pms[iyear]->Push<Hist1D>(Axis(binning, "FatJet_pt[0]", "FatJet p_{T} [GeV]"), sels_SR[isel], samples_Run2_nodata[iyear], all_plot_types_SR).Weight(weight_other).Tag(years[iyear]);
-//      pms[iyear]->Push<Hist1D>(Axis(binning, "FatJet_pt[0]", "FatJet p_{T} [GeV]"), sels_CR[isel], samples_Run2[iyear]       , all_plot_types).Weight(weight_other).Tag(years[iyear]);
-////      pms[iyear]->Push<Hist1D>(Axis(binning, "FatJet_pt[0]", "FatJet p_{T} [GeV]"), sels_SR[isel], signal_samples_Run2[iyear], all_plot_types).Weight(weight_other).Tag(years[iyear]);
-////      pms[iyear]->Push<Hist1D>(Axis(binning, "FatJet_pt[0]", "FatJet p_{T} [GeV]"), sels_CR[isel], signal_samples_Run2[iyear], all_plot_types).Weight(weight_other).Tag(years[iyear]);
-//    }
-//  }
-  vector<double> binning_loose = {200,300,400,500,600,700,800,2000};
+  vector<double> binning = {200,400,600,800,1000};
   for (uint iyear = 0; iyear < years.size(); iyear++) {
-    for (uint isel = 0; isel < looseSel.size(); isel++) {
-      pms[iyear]->Push<Hist1D>(Axis(binning_loose, "FatJet_pt[0]", "FatJet p_{T} [GeV]"), looseSel[isel], samples_Run2_nodata[iyear], all_plot_types_SR).Weight(weight_other).Tag(years[iyear]);
+    //    if (0 != iyear) {break;}
+    for (uint isel = 0; isel < sels_CR.size(); isel++) {
+      pms[iyear]->Push<Hist1D>(Axis(binning, "FatJet_pt[0]", "FatJet p_{T} [GeV]"), sels_SR[isel], samples_Run2_nodata[iyear], all_plot_types_SR).Weight(weight_other).Tag(years[iyear]);
+      pms[iyear]->Push<Hist1D>(Axis(binning, "FatJet_pt[0]", "FatJet p_{T} [GeV]"), sels_CR[isel], samples_Run2[iyear]       , all_plot_types).Weight(weight_other).Tag(years[iyear]);
+//      pms[iyear]->Push<Hist1D>(Axis(binning, "FatJet_pt[0]", "FatJet p_{T} [GeV]"), sels_SR[isel], signal_samples_Run2[iyear], all_plot_types).Weight(weight_other).Tag(years[iyear]);
+//      pms[iyear]->Push<Hist1D>(Axis(binning, "FatJet_pt[0]", "FatJet p_{T} [GeV]"), sels_CR[isel], signal_samples_Run2[iyear], all_plot_types).Weight(weight_other).Tag(years[iyear]);
     }
   }
+  // 9/23/2020 I'm pretty sure this is only for loose. Idk why I ever combined them...
+//  vector<double> binning_loose = {200,300,400,500,600,700,800,2000};
+//  for (uint iyear = 0; iyear < years.size(); iyear++) {
+//    for (uint isel = 0; isel < looseSel.size(); isel++) {
+//      pms[iyear]->Push<Hist1D>(Axis(binning_loose, "FatJet_pt[0]", "FatJet p_{T} [GeV]"), looseSel[isel], samples_Run2_nodata[iyear], all_plot_types_SR).Weight(weight_other).Tag(years[iyear]);
+//    }
+//  }
 
 
   
